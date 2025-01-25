@@ -1,12 +1,16 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { Link, redirect } from 'react-router-dom';
+import { Link, Navigate, redirect, useNavigate } from 'react-router-dom';
 import Signup from './Signup';
+import { useDispatch } from 'react-redux';
+import { addUser } from '../utils/userSlice';
 const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [error,setError] = useState("");
+  const navigate = useNavigate();
+const dispatch = useDispatch();
   //write the handler function for login 
   const loginHandler = async () => {
     try {
@@ -19,10 +23,15 @@ const Login = () => {
       //we want to set the withcrea
     ,{withCredentials:true}
     )
-    
 
-    } catch (error) {
-      console.log(error);
+
+dispatch(addUser(res.data))
+
+return navigate("/")
+
+
+    } catch (err) {
+     setError(err?.response?.data || "something went wrong");
 
     }
   }
@@ -65,7 +74,7 @@ const Login = () => {
               <input type='password' placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} />
             </label></div>
 
- 
+ <p className='text-red-500 text-center'>{error }</p>
 <div className="card-actions justify-center ">
             <button className="btn btn-primary" onClick={loginHandler}>Login</button>
           </div>
