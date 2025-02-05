@@ -13,6 +13,8 @@ import store from './utils/store'
 import { Provider, useDispatch } from 'react-redux'
 import axios from 'axios'
 import { addUser } from './utils/userSlice'
+import Connection from './component/Connection'
+import Request from './component/Request'
 function App() {
 //as soon as the app is load i will fetch the data of user and send data to the store if 
 
@@ -27,6 +29,8 @@ function App() {
     <Route path='/login' element={<Login/>}/>
     <Route path="/signup" element={<Signup/>}/>
     <Route path="/profile" element={<Profile/>}/>
+    <Route path="/connections" element={<Connection/>}/>
+    <Route path="/requests" element={<Request/>}/>
     </Route>
         </Routes>
       </BrowserRouter>
