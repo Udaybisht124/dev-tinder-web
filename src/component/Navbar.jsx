@@ -22,7 +22,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar bg-neutral gap-5 max-w-screen-2xl ">
+    <div className="navbar bg-base-200 gap-5 max-w-screen-2xl ">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-xl">🧑‍💻devTinder</Link>
       </div>
