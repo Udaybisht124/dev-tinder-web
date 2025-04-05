@@ -20,7 +20,7 @@ const UserCard = ({ user }) => {
 
   return (
 
-    <div className="card max-h-[440px] bg-base-300 w-96 shadow-xl ">
+    <div className="card max-h-[440px] bg-base-300 w-96 shadow-xl">
       <figure>
         <img  className=' mt-16 mx-auto'    src={user.photoUrl} alt="photo" />
       </figure>

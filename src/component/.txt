@@ -1,0 +1,2 @@
+https://dev-tinder-backend-27cv.onrender.com/signup
+http://localhost:7000/signup

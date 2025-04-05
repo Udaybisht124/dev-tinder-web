@@ -12,7 +12,7 @@ const [password,setPassword] = useState("");
 //write the signup handler function here
 const signupHandler = async () =>{
   try {
-    const res = await axios.post("http://localhost:7000/signup",{
+    const res = await axios.post( BASE_URL + "/signup",{
   firstName,
   lastName,
   email,
