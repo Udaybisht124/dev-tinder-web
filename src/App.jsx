@@ -1,20 +1,17 @@
 
-import './App.css'
-import Navbar from './component/Navbar'
-import Footer from './component/Footer'
-import Body from './component/Body'
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
-import Home from './component/Home'
-import Login from './component/Login'
-import Signup from './component/Signup'
-import Feed from './component/Feed'
-import Profile from './component/Profile'
-import store from './utils/store'
-import { Provider, useDispatch } from 'react-redux'
-import axios from 'axios'
-import { addUser } from './utils/userSlice'
-import Connection from './component/Connection'
-import Request from './component/Request'
+import Body from './component/Body.jsx';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import Home from './component/Home.jsx';
+import Login from './component/Login.jsx';
+import Signup from './component/Signup.jsx';
+import Feed from './component/Feed.jsx';
+import Profile from './component/Profile.jsx';
+import store from './utils/store.js';
+import { Provider, useDispatch } from 'react-redux';
+import axios from 'axios';
+import { addUser } from './utils/userSlice.js';
+import Connection from './component/Connection.jsx';
+import Request from './component/Request.jsx';
 function App() {
 //as soon as the app is load i will fetch the data of user and send data to the store if 
 
