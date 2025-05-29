@@ -6,13 +6,13 @@ import { Link, useNavigate } from "react-router-dom";
 import BASE_URL from "../utils/constants";
 
 const Login = () => {
-  const [email, setEmail]= useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [isLoginForm, setIsLoginForm] = useState(true);
   const [error, setError] = useState("");
-  const [showToast,setShowToast] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -45,14 +45,14 @@ const Login = () => {
       setTimeout(() => {
         setShowToast(false);
       }, 3000);
-   
+
       return navigate("/login");
     } catch (err) {
       setError(err?.response?.data || "Something went wrong");
     }
   };
   return (
-    <div className="flex justify-center my-10 md:mx-10">
+    <div className="flex justify-center  my-16 2xl:my-36 md:mx-10">
       <div className="card bg-base-300 w-96 shadow-xl">
         <div className="card-body">
           <h2 className="card-title justify-center">
