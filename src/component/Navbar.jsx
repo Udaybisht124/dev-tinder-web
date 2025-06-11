@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-200 gap-5 w-screen ">
+    <div className="navbar bg-red-400 gap-5 w-screen ">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-xl">
           🧑‍💻devTinder

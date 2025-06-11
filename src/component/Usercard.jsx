@@ -171,22 +171,23 @@ const UserCard = ({ user, hideActions }) => {
           </span>
         </span>
       )}
-      <figure className="w-full flex justify-center pt-8 px-8">
+      <div className="flex flex-col bg-white items-center justify-center w-full mt-10 pt-2 px-8">
         <img
           className="rounded-full object-cover w-40 h-40 border-4 border-gray-700 shadow-lg mb-4"
           src={photoUrl}
           alt="User photo"
         />
-      </figure>
-      <div className="w-full px-8 pb-8 flex flex-col items-center text-center">
-        <h2 className="text-2xl font-bold text-gray-100 mt-2">
-          {firstName + " " + lastName}
-        </h2>
-        {age && gender && (
-          <p className="text-gray-300 text-sm mt-1">
-            {age + " years, " + gender}
-          </p>
-        )}
+        <div className="w-full text-center">
+          <h2 className="text-2xl font-bold mt-2">
+            {firstName + " " + lastName}
+          </h2>
+          {age && gender && (
+            <p className="text-gray-300 text-sm mt-1">
+              {age + " years, " + gender}
+            </p>
+          )}
+        </div>
+
         {about && <p className="text-gray-400 text-base mt-4 mb-2">{about}</p>}
         {!hideActions && (
           <div className="flex gap-4 justify-center my-4 w-full">
